@@ -1,0 +1,38 @@
+<div class="title" data-aos="fade-right">
+    <p>Review</p>
+</div>
+<div class="wrapper">
+    <div class="card" *ngFor="let vote of votes" data-aos="fade-up" >
+        <div class="votes">
+            <p>{{ vote.votes }}</p>
+        </div>
+        <mat-progress-spinner
+            class="example-margin"
+            [color]="color"
+            [mode]="mode"
+            [value]="(vote.rating)*20">
+        </mat-progress-spinner>
+        <div class="rating">
+            {{ vote.rating }}star
+        </div> 
+    </div>
+</div>
+<div class="title" data-aos="fade-right">
+    <p>Feature Rating</p>
+</div>
+<div class="wrapper">
+    <div class="card" *ngFor="let keys of feature_keys" data-aos="fade-up"  >
+        <div class="votes">
+            <p>{{ keys[0] }}</p>
+        </div>
+        <mat-progress-spinner
+            class="example-margin"
+            [color]="color"
+            [mode]="mode"
+            [value]="(keys[1])*20">
+        </mat-progress-spinner>
+        <div class="rating">
+            {{ keys[1] }}/5
+        </div> 
+    </div>
+</div>

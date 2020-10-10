@@ -1,0 +1,47 @@
+.wrapper{
+    padding:1em 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 2em 2.5em;
+    .card{
+         display: grid;
+         grid-template-columns:repeat(10, 1fr);  
+         grid-template-rows:repeat(10, 1fr);  
+         place-items: center;
+        //  background:rgb(156, 160, 147);
+        .votes{
+            grid-column: 1/11;
+            grid-row:1/11;
+            font-weight: 700;
+            font-size: 20px;
+            color:white;
+        }
+        mat-progress-spinner{
+            grid-column: 1/11;
+            grid-row:1/11;
+        }
+        .rating{
+            grid-column: 1/11;
+            grid-row:9;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }    
+}
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 25px;
+}
+@media (max-width: 500px){
+    img{
+        height: 100%;
+        width: 100%;
+    }  
+    .wrapper{
+        background-color: #35017F;
+    } 
+
+}

@@ -1,0 +1,33 @@
+<div *ngFor="let values of dataArray">
+    <div class="slide">
+        <div class="container">
+            <div class="name" data-aos="zoom-in" data-aos-duration="2000">
+                <p>WELCOME TO {{ values.name }}</p>
+            </div>
+            <div class="image" data-aos="zoom-in" data-aos-duration="1500">
+                <img [src]="values.cover_image" alt="">
+            </div>
+            <div>
+                <button mat-button (click)="signIn()" color="accent">Signup For Reservation</button>
+            </div>
+            <div>
+                <mat-icon matSuffix >arrow_upward</mat-icon>
+            </div>
+            <div>
+                <p>SwipeUp To Explore Our Cafe</p>
+            </div>
+        </div>
+    </div>
+    <div  class="details">
+        <mat-toolbar>
+            <span> {{ values.name }} </span> 
+            <div class="toolbar_spacing"></div>
+            <a mat-button routerLink="/location">Locations</a>
+            <a mat-button routerLink="/about">About Us</a>
+            <a mat-button routerLink="/rating">Ratings</a>
+        </mat-toolbar>
+        <div class="router">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
